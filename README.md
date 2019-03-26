@@ -23,8 +23,7 @@ React-HammerJS wraps a React component, binding Hammer events to it so it can fi
 
 ## Properties
 
-The following events are supported:
-
+### Event Listener properties
 * `onTap`
 * `onDoubleTap`
 * `onPan`
@@ -45,12 +44,12 @@ The following events are supported:
 * `onRotateMove`
 * `onRotateStart`
 * `onSwipe`
+* `action` - like the `onTap` event handler but will also be fired `onPress`.
 
-You can also provide an `action` property which is like the `onTap` event handler but will also be fired `onPress`.
+### Behavior properties
+* `direction` - (string) `'DIRECTION_ALL'` | `'DIRECTION_HORIZONTAL'` | `'DIRECTION_VERTICAL'`.  Used to restrict the `pan` and `swipe` direction. These string values may also work: `'DIRECTION_NONE'` |`'DIRECTION_LEFT'` | `'DIRECTION_RIGHT'` | `'DIRECTION_UP'` | `'DIRECTION_DOWN'`.
 
-If you provide the prop `direction` the `pan` and `swipe` events will support `Hammer.DIRECTION_(NONE/LEFT/RIGHT/UP/DOWN/HORIZONTAL/VERTICAL/ALL)`.
-
-The `options` property can be used to configure the Hammer manager. These properties will be merged with the default ones.
+* `options` - can be used to configure the Hammer manager. These properties will be merged with the default ones.
 
 ### Example
 
@@ -98,4 +97,4 @@ Disabled events are detailed in the hammer.js api documentation:
 
 # License
 
-MIT Licensed. Copyright (c) Jed Watson 2016.
+MIT Licensed. Copyright (c) Jed Watson 2017.
